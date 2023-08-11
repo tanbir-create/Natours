@@ -4,7 +4,9 @@ const catchAsync = require("../utils/catchAsync");
 
 // This contoller generalizes all the common CRUD operations without many complexities
 
-// These contorllers take in the Model to be updated as a param and build closure with it and return the catchAsync which in term again wraps the req, res objects and finally return a function to be used by express when an api is called
+// These contorllers take in the Model to be updated as a param and build closure with it and return the
+// catchAsync which in term again wraps the req, res objects and finally return a function to be used by
+// express when an api is called.
 
 exports.getAll = (Model) =>
   catchAsync(async (req, res, next) => {

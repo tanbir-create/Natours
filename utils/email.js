@@ -35,7 +35,8 @@ module.exports = class Email {
     });
   }
 
-  // This works as a generic method to send emails because we will send many types of email in future so passing a template and subject and creating new methods like sendWelcome is easier and clean
+  // This works as a generic method to send emails because we will send many types of email in future so passing a
+  // template and subject and creating new methods like sendWelcome is easier and clean
   async send(template, subject) {
     // Send the actual email
 

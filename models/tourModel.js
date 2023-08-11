@@ -134,25 +134,31 @@ const tourSchema = new mongoose.Schema(
   }
 );
 
-// Compound index: because the tours will be queried by user based on price and ratings(from high to low) alot. Index works for findBy(price), sortBy(price), sortBy(price,-ratingsAverage) and sortBy(-price,ratingsAverage)
+// Compound index: because the tours will be queried by user based on price and ratings(from high to low) alot.
+// This index works for findBy(price), sortBy(price), sortBy(price,-ratingsAverage) and sortBy(-price,ratingsAverage)
 tourSchema.index({ price: 1, ratingsAverage: -1 });
 
-// _id is indexed by default, here slug is indexed because the view routes use /:slug to get individual tours. As the page is ssr it is better to have slugs in url for SEO.
+// _id is indexed by default, here slug is indexed because the view routes use /:slug to get individual tours.
+// As the page is ssr it is better to have slugs in url for SEO.
 tourSchema.index({ slug: 1 });
 
 // A proximity query on GeoJSON data requires a 2dsphere index. Mongo docs https://tinyurl.com/mt7a56ry
 tourSchema.index({ startLocation: "2dsphere" });
 
-// Virtuals are not stored in DB. When querying for documents the virtuals are generated to be added to the doc and sent in response
+// Virtuals are not stored in DB. When querying for documents the virtuals are generated to be added to the
+// doc and sent in response
 tourSchema.virtual("durationWeeks").get(function () {
   return (this.duration / 7).toFixed(2);
 });
 
 // Virtual populate
-// Since storing reviews/reviewId in array in tour docs might make the docs large, we populate them using virtual populate provided by mongoose
+// Since storing reviews/reviewId in array in tour docs might make the docs large, we populate them using virtual
+// populate provided by mongoose
 // ref: The "ref" option specifies the model name to which the virtual property refers
-// foreignField: The "foreignField" option specifies the field in the referenced model ("Review") that holds the reference to the current model ("Tour").
-// localField: The "localField" option specifies the field in the current model ("Tour") that is used as the local/primary key for populating the virtual property.
+// foreignField: The "foreignField" option specifies the field in the referenced model ("Review") that holds the
+// reference to the current model ("Tour").
+// localField: The "localField" option specifies the field in the current model ("Tour") that is used as the
+// local/primary key for populating the virtual property.
 tourSchema.virtual("reviews", {
   ref: "Review",
   foreignField: "tour",
