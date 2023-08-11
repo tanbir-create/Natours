@@ -30,7 +30,9 @@ app.set("views", path.join(__dirname, "views"));
 
 app.use(helmet());
 
-// When the client-side code requests an image from another URL, such as an external API or a different domain, the browser will attempt to load the image. At this point, the CSP comes into play. The browser checks the CSP directives defined in the server's **response headers** or in the helmet.contentSecurityPolicy() middleware configuration.
+// When the client-side code requests an image from another URL, such as an external API or a different domain,
+//the browser will attempt to load the image. At this point, the CSP comes into play. The browser checks the CSP
+//directives defined in the server's **response headers** or in the helmet.contentSecurityPolicy() middleware configuration.
 // Directives specify the allowed sources for different types of resources (e.g., scripts, stylesheets, images, etc.).
 app.use(
   helmet.contentSecurityPolicy({
@@ -76,7 +78,8 @@ app.use(
   })
 );
 
-// configuring Express to serve static files from the "leaflet" directory, which is located in the node_modules, therefore enabling the usage of the Leaflet.js library's static files by routing requests with "/leaflet"
+// configuring Express to serve static files from the "leaflet" directory, which is located in the node_modules
+// therefore enabling the usage of the Leaflet.js library's static files by routing requests with "/leaflet"
 app.use("/leaflet", express.static(path.join(__dirname, "node_modules/leaflet/dist")));
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -88,7 +91,8 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/reviews", reviewRouter);
 app.use("/api/v1/bookings", bookingsRouter);
 
-// captures all requests for API endpoints that do not match any defined routes and responds with an error message indicating that the requested URL does not exist on the server.
+// captures all requests for API endpoints that do not match any defined routes and responds with an error message
+// indicating that the requested URL does not exist on the server.
 app.all("*", (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });

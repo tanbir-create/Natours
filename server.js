@@ -7,10 +7,6 @@ https://documenter.getpostman.com/view/2s9Xy2PsKN?version=latest
 
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-// const fs = require("fs/promises");
-// const Tour = require("./models/tourModel");
-// const User = require("./models/userModel");
-// const Review = require("./models/reviewModel");
 
 process.on("uncaughtException", (err) => {
   console.log("UNCAUGHT EXCEPTION..........Shutting down");
@@ -28,20 +24,7 @@ mongoose.connect(process.env.DATABASE_LOCAL).then(() => {
   console.log("DB connection successful");
 });
 
-// async function loadData(filePath, Model) {
-//   fs.readFileSync(filePath).then(async (data) => {
-//     await Model.create(JSON.parse(data.toString()), { validateBeforeSave: false });
-//   });
-// }
-
 const server = app.listen(PORT, async () => {
-  // await Tour.deleteMany();
-  // await User.deleteMany();
-  // await Review.deleteMany();
-  // await loadData("./dev_data/tours-detailed.json", Tour);
-  // await loadData("./dev_data/reviews.json", Review);
-  // await loadData("./dev_data/users.json", User);
-
   console.log("Server started on port ", PORT);
 });
 
