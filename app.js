@@ -22,6 +22,22 @@ const app = express();
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "views"));
 
+//When running the application behind a reverse proxy or load balancer (common in production environments,
+// here, a free cloud provider), the client's IP address might be hidden behind these
+//proxy servers. By setting trust proxy to true, Express will trust the values of headers
+// like X-Forwarded-For, making express-rate-limit accurately identify users even when
+// the application is behind a proxy.
+
+// When you have multiple servers (S1, S2, S3) behind a reverse proxy, each server doesn't
+// have direct visibility into the rate limiting that the other servers are applying. Each
+// server independently handles the incoming requests it receives. This can lead to a
+// situation where the total rate limit across all servers might exceed the intended rate
+// limit. To mitigate this we can use a central rate limiter instead of on the server.
+
+// This project is for learning so rate limit is not a big concern here, fixing this just
+// because the hosting service logs an error on 'X-Forwarded-For' header.
+app.set("trust proxy", true);
+
 // app.use(
 //   cors({
 //     origin: ["https://checkout.stripe.com"],
