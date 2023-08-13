@@ -37,7 +37,7 @@ There are various roles all over the app for different types of users which can 
 Clone the repository and follow the instructions or run the commands below:
 
 1. `npm install` (installs all necessary dependencies for the app)
-2. set your env variables ( check example `config.env` for your reference)
+2. set your env variables in a `config.env` file ( check example `config.env` for your reference)
   (we use *mongodb* as database, *mailtrap* as development email service, *brevo* as production email service,
 	and *stripe* as payment service provider )	
 3. run command: `node dev-data/import-dev-data --import` (to import dummy dev data to your database)
