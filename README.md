@@ -9,6 +9,9 @@
 #### Table of contents:
  - [App features](#Features)
  - [Installation](#Installation)
+ - [Usage](#Usage)
+ - [Learnings](#Learnings)
+
 
 
 #### Features
@@ -48,3 +51,33 @@ Clone the repository and follow the instructions or run the commands below:
 	- `npm run dev` (for development, starts app watching for changes using nodemon)
 	-  `npm run start:prod` (for production, starts app watching for changes using nodemon)
 	-  `npm run debug` (for debugging purposes)
+
+
+
+
+
+
+
+#### Usage	
+Please check the [API Documentation](https://documenter.getpostman.com/view/2s9Xy2PsKN?version=latest) for better understanding of the APIs.
+
+Set your base api URL in the postman environment variable, also add another variable ***jwt*** for ease of use on authenticated/authorized routes (read below).
+
+Add this line of code to the **Tests** tab in the `/signup` and `/login` endpoints: `pm.environment.set("jwt", pm.response.json().token);`  to set the current value of  ***jwt***  (from the `res.token` of the response body of authentication requests) in the environment variable added above .
+
+Using the ***jwt*** variable: For protected routes throughout the app, in the **Authorization** tab set the type as *Bearer Token* and set the Token value as {{jwt}}. On every successful signup/login this will ensure the new jwt value is set automatically in the jwt env variable using the above two steps. Voila! follow the api documentation here on.
+
+
+
+#### Learnings
+Please do check the code documentation for understanding my learnings further. I tried to comment as much for better understanding of the reader and also portray my learnings altogether. Lot of these might be express and node specific but I am generalizing my learnings to fit any language or frameworks.
+
+Learnings include but not limited to: 
+
+ - Building ~production grade backend apps. With better *data modelling*, creating meaningful *REST API* routing.
+ - Advance database querying including aggregation pipeline, data population, also using indexes for various use cases for faster querying.
+ - Security best practices ( sanitizing inputs, injection attacks, parameter pollution, CSP, anti xss, api rate limting, csrf, etc) (lot to learn and I am here for it)
+ - Authentication and authorization best practices (lot to learn)
+ - *Global error handling* (makes error handling alot smooth by handling errors in a central place making the development process easy)
+ - Using payment gateways, webhooks ( just a start and I am here for it all)
+ - Building API features for filtering, sorting, pagination of data. 
