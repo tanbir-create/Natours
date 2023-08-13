@@ -34,8 +34,9 @@ app.set("views", path.join(__dirname, "views"));
 // situation where the total rate limit across all servers might exceed the intended rate
 // limit. To mitigate this we can use a central rate limiter instead of on the server.
 
-// This project is for learning so rate limit is not a big concern here, fixing this just
-// because the hosting service logs an error on 'X-Forwarded-For' header.
+// This project is for learning so rate limit is not a big concern here.
+// ************** TODO **********
+// https://github.com/express-rate-limit/express-rate-limit/wiki/Troubleshooting-Proxy-Issues
 app.set("trust proxy", true);
 
 // app.use(
