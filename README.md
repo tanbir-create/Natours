@@ -3,7 +3,7 @@
 ## A Tour Booking App
 
 #### Table of contents:
- - [App features](#%20Features)
+ - [App features](#Features)
 
 
 #### cs
