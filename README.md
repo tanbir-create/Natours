@@ -6,6 +6,8 @@
 
 **API documentation:**  https://documenter.getpostman.com/view/2s9Xy2PsKN?version=latest
 
+**Video Demo** https://www.loom.com/share/b7c1c29f509c41b3b24891f0362fc189?sid=9bdb72c5-ba64-45b8-8f4e-d98460707930
+
 #### Table of contents:
  - [App features](#Features)
  - [Installation](#Installation)
@@ -80,4 +82,11 @@ Learnings include but not limited to:
  - Authentication and authorization best practices (lot to learn)
  - *Global error handling* including operational and dev errors (makes error handling alot smooth by handling errors in a central place making the development process easy)
  - Using payment gateways, webhooks.
- - Building API features for filtering, sorting, pagination of data. 
+ - Building API features for filtering, sorting, pagination of data.
+
+
+### Acknowledgement
+
+This project is a part of the course I have taken. I have learnt a lot from this course am very grateful for it. [Course link] (https://www.udemy.com/course/nodejs-express-mongodb-bootcamp/)
+
+ 
