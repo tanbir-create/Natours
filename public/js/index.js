@@ -1,12 +1,14 @@
 /*eslint-disable*/
 import "@babel/polyfill";
 import { login, logout } from "./login";
+import { signup } from "./signup";
 import { displayMap } from "./map";
 import { updateSettings } from "./updateSettings";
 import { bookTour } from "./stripe";
 
 const mapB = document.getElementById("map");
 const loginForm = document.querySelector(".form--login");
+const signupForm = document.querySelector(".form--signup");
 const logOutBtn = document.querySelector(".nav__el--logout");
 const updateUserForm = document.querySelector(".form-user-data");
 const userPasswordForm = document.querySelector(".form-user-password");
@@ -16,6 +18,19 @@ if (mapB) {
   // locations are set in the data-locations in the map element
   const locations = JSON.parse(mapB.dataset.locations);
   displayMap(locations);
+}
+
+if (signupForm) {
+  signupForm.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const passwordConfirm = document.getElementById("passwordConfirm").value;
+
+    signup(name, email, password, passwordConfirm);
+  });
 }
 
 if (loginForm) {
