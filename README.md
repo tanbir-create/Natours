@@ -44,7 +44,7 @@ Clone the repository and follow the instructions or run the commands below:
   or  `node dev-data/import-dev-data --delete` (to clear database)
 4. `npm run build:js` (build client js bundle using parcel)
 5. Use any one of the below commands according to your needs:
-> `	npm start` (starts app)
-	    `npm run dev` (for development, starts app watching for changes using nodemon)
-	   `npm run start:prod` (for production, starts app watching for changes using nodemon)
-	   `npm run debug` (for debugging purposes)
+	- `npm start` (starts app)
+	- `npm run dev` (for development, starts app watching for changes using nodemon)
+	-  `npm run start:prod` (for production, starts app watching for changes using nodemon)
+	-  `npm run debug` (for debugging purposes)
