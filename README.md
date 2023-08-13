@@ -84,6 +84,7 @@ Learnings include but not limited to:
  - Using payment gateways, webhooks.
  - Building API features for filtering, sorting, pagination of data.
 
+A lot can be upgraded/added to the project and I will do so in future. Currently I will be focusing on creating more such projects from scratch on my own taking the learnings from this one and adding more as I go.
 
 ### Acknowledgement
 
