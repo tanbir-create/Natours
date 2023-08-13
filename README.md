@@ -14,7 +14,7 @@
 
 
 
-#### Features
+### Features
 
 A Tour booking app to live your next dream vacation.
 There are various roles all over the app for different types of users which can perform the below actions.
@@ -36,7 +36,7 @@ There are various roles all over the app for different types of users which can 
 	- Manage users, guides, tours, reviews.
 
 
-#### Installation
+### Installation
 Clone the repository and follow the instructions or run the commands below:
 
 1. `npm install` (installs all necessary dependencies for the app)
@@ -58,7 +58,7 @@ Clone the repository and follow the instructions or run the commands below:
 
 
 
-#### Usage	
+### Usage	
 Please check the [API Documentation](https://documenter.getpostman.com/view/2s9Xy2PsKN?version=latest) for better understanding of the APIs.
 
 Set your base api URL in the postman environment variable, also add another variable ***jwt*** for ease of use on authenticated/authorized routes (read below).
@@ -69,7 +69,7 @@ Using the ***jwt*** variable: For protected routes throughout the app, in the **
 
 
 
-#### Learnings
+### Learnings
 Please do check the code documentation for understanding my learnings further. I tried to comment as much for better understanding of the reader and also portray my learnings altogether. Lot of these might be express and node specific but I am generalizing my learnings to fit any language or frameworks.
 
 Learnings include but not limited to: 
