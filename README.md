@@ -78,6 +78,6 @@ Learnings include but not limited to:
  - Advance database querying including aggregation pipeline, data population, also using indexes for various use cases for faster querying.
  - Security best practices ( sanitizing inputs, injection attacks, parameter pollution, CSP, anti xss, api rate limting, csrf, etc) (lot to learn and I am here for it)
  - Authentication and authorization best practices (lot to learn)
- - *Global error handling* (makes error handling alot smooth by handling errors in a central place making the development process easy)
- - Using payment gateways, webhooks ( just a start and I am here for it all)
+ - *Global error handling* including operational and dev errors (makes error handling alot smooth by handling errors in a central place making the development process easy)
+ - Using payment gateways, webhooks.
  - Building API features for filtering, sorting, pagination of data. 
