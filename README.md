@@ -72,7 +72,7 @@ Using the ***jwt*** variable: For protected routes throughout the app, in the **
 
 
 ### Learnings
-Please do check the code documentation for understanding my learnings further. I tried to comment as much for better understanding of the reader and also portray my learnings altogether. Lot of these might be express and node specific but I am generalizing my learnings to fit any language or frameworks.
+Please do check the code for the code documentation for understanding my learnings further. I tried to comment as much for better understanding of the reader and also portray my learnings altogether. Lot of these might be express and node specific but I am generalizing my learnings to fit any language or frameworks.
 
 Learnings include but not limited to: 
 
