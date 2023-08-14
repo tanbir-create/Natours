@@ -60,7 +60,19 @@ Clone the repository and follow the instructions or run the commands below:
 
 
 
-### Usage	
+### Usage
+
+1. Web App:
+
+ - Login using your email, password
+ - Select tour you want to book
+ - Click on "Book Tour" button
+ - Complete booking using stripe checkout page
+   *Card details for test mode in stripe*
+>Card No.= 4242 4242 4242 4242,  CVC = Any 3 digits, Expiry date: *Any future date*
+
+2. API:
+
 Please check the [API Documentation](https://documenter.getpostman.com/view/2s9Xy2PsKN?version=latest) for better understanding of the APIs.
 
 Set your base api URL in the postman environment variable, also add another variable ***jwt*** for ease of use on authenticated/authorized routes (read below).
